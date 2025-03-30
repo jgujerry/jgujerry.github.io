@@ -1,10 +1,8 @@
-site_name: A developer's notebook
+site_name: Jerry J. Gu
 site_url: https://jgujerry.github.io
 
 theme:
   name: material
-  favicon: assets/favicon.ico
-  logo: assets/logo.png
   palette:
     primary: indigo
   features:
