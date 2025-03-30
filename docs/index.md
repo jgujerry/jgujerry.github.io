@@ -1,17 +1,8 @@
-# Welcome to MkDocs
+---
+hide:
+    - toc
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# Welcome
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+I'm Jerry J. Gu, a Python developer having broad interests in the development of data, web, GIS, cloud, and AI...

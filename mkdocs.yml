@@ -1,1 +1,21 @@
-site_name: My Docs
+site_name: A developer's notebook
+site_url: https://jgujerry.github.io
+
+theme:
+  name: material
+  favicon: assets/favicon.ico
+  logo: assets/logo.png
+  palette:
+    primary: indigo
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+
+nav:
+  - Home: index.md
+  - Tools:
+    - Cursor: tools/cursor.md
+    - Tmux: tools/tmux.md
+
+extra_css:
+  - styles/extra.css

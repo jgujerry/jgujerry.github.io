@@ -1,7 +1,4 @@
-# jgujerry.github.io
-
-The random docs from Jerry J. Gu
-
+# Cookbook - Less is More
 
 ### Mkdocs Environment
 
