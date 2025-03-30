@@ -1,2 +1,3 @@
 # jgujerry.github.io
-Jerry J. Gu's random notes
+
+The personal docs
