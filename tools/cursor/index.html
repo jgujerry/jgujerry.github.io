@@ -373,15 +373,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#download" class="md-nav__link">
-    <span class="md-ellipsis">
-      Download
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
       Installation
@@ -391,18 +382,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#desktop-icon" class="md-nav__link">
+  <a href="#configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Desktop Icon
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#command" class="md-nav__link">
-    <span class="md-ellipsis">
-      Command
+      Configuration
     </span>
   </a>
   
@@ -474,15 +456,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#download" class="md-nav__link">
-    <span class="md-ellipsis">
-      Download
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
       Installation
@@ -492,18 +465,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#desktop-icon" class="md-nav__link">
+  <a href="#configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Desktop Icon
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#command" class="md-nav__link">
-    <span class="md-ellipsis">
-      Command
+      Configuration
     </span>
   </a>
   
@@ -527,17 +491,18 @@
 
 <h1 id="cursor">Cursor</h1>
 <p>The AI Code Editor - https://www.cursor.com/</p>
-<h3 id="download">Download</h3>
+<h3 id="installation">Installation</h3>
+<p>1 - Download</p>
 <p>Download the AppImage for Linux from <a href="https://www.cursor.com/downloads">https://www.cursor.com/downloads</a></p>
 <p>e.g. <code>~/Downloads/Cursor-0.47.9-x86_64.AppImage</code></p>
-<h3 id="installation">Installation</h3>
+<p>2 - Install</p>
 <p>Copy this AppImage to <code>/opt</code>,</p>
 <pre><code class="language-bash">sudo cp ~/Downloads/Cursor-0.47.9-x86_64.AppImage /opt/cursor.appimage
 </code></pre>
 <p>Make it to be executable,</p>
 <pre><code class="language-bash">sudo chmod +x /opt/cursor.appimage
 </code></pre>
-<h3 id="desktop-icon">Desktop Icon</h3>
+<p>3 - Icon</p>
 <p>Create a desktop icon for Cursor,</p>
 <pre><code class="language-bash">sudo vim /usr/share/applications/cursor.desktop
 </code></pre>
@@ -550,7 +515,7 @@ Type=Application
 Categories=Development;
 </code></pre>
 <p>Search cursor logo online, download a logo image, and copy to <code>/opt/cursor.jpeg</code>.</p>
-<h3 id="command">Command</h3>
+<p>4 - Command</p>
 <p>Create an <code>alias</code> to start Cursor from command line,</p>
 <pre><code class="language-bash">vim ~/.zshrc
 </code></pre>
@@ -560,6 +525,10 @@ Categories=Development;
 <p>Then save and source the file,</p>
 <pre><code class="language-bash">source ~/.zshrc
 </code></pre>
+<h3 id="configuration">Configuration</h3>
+<p>1 - Activity Bar like VSCode</p>
+<p>Open the settings - <code>Ctrl + ,</code></p>
+<p>Workbench &gt; Activity Bar: Orientation, Choose <code>vertical</code></p>
 
 
 
