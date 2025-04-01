@@ -3,14 +3,17 @@
 The AI Code Editor - https://www.cursor.com/
 
 
-### Download
+### Installation
+
+1 - Download
 
 Download the AppImage for Linux from [https://www.cursor.com/downloads](https://www.cursor.com/downloads)
 
 e.g. `~/Downloads/Cursor-0.47.9-x86_64.AppImage`
 
 
-### Installation
+2 - Install
+
 Copy this AppImage to `/opt`,
 
 ```bash
@@ -24,7 +27,8 @@ sudo chmod +x /opt/cursor.appimage
 ```
 
 
-### Desktop Icon
+3 - Icon
+
 Create a desktop icon for Cursor,
 
 ```bash
@@ -44,7 +48,7 @@ Categories=Development;
 Search cursor logo online, download a logo image, and copy to `/opt/cursor.jpeg`.
 
 
-### Command
+4 - Command
 
 Create an `alias` to start Cursor from command line,
 
@@ -63,3 +67,12 @@ Then save and source the file,
 ```bash
 source ~/.zshrc
 ```
+
+
+### Configuration
+
+1 - Activity Bar like VSCode
+
+Open the settings - `Ctrl + ,`
+
+Workbench > Activity Bar: Orientation, Choose `vertical`
