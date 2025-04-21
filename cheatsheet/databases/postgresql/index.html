@@ -8,28 +8,26 @@
       
       
       
-        <link rel="canonical" href="https://jgujerry.github.io/tools/cursor/">
+        <link rel="canonical" href="https://jgujerry.github.io/cheatsheet/databases/postgresql/">
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../../tools/tmux/">
       
       
-        <link rel="next" href="../tmux/">
       
-      
-      <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.10">
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
-        <title>Cursor - Jerry J. Gu as a Developer</title>
+        <title>PostgreSQL - Jerry J. Gu as a Developer</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../../styles/extra.css">
+      <link rel="stylesheet" href="../../../styles/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cursor" class="md-skip">
+        <a href="#postgresql" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +88,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Jerry J. Gu as a Developer" class="md-header__button md-logo" aria-label="Jerry J. Gu as a Developer" data-md-component="logo">
+    <a href="../../.." title="Jerry J. Gu as a Developer" class="md-header__button md-logo" aria-label="Jerry J. Gu as a Developer" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cursor
+              PostgreSQL
             
           </span>
         </div>
@@ -122,11 +120,13 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -158,6 +158,7 @@
     </div>
   </div>
 </div>
+      
     
     
   </nav>
@@ -174,7 +175,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -196,15 +197,27 @@
   
     
     
+      
+  
+  
+  
+    
+  
+  
+    
+    
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../../tools/cursor/" class="md-tabs__link">
           
   
   
-  Tools
+  Cheatsheet
 
         </a>
       </li>
+    
+  
+
     
   
 
@@ -237,7 +250,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Jerry J. Gu as a Developer" class="md-nav__button md-logo" aria-label="Jerry J. Gu as a Developer" data-md-component="logo">
+    <a href="../../.." title="Jerry J. Gu as a Developer" class="md-nav__button md-logo" aria-label="Jerry J. Gu as a Developer" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -255,7 +268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -301,7 +314,7 @@
   
   
   <span class="md-ellipsis">
-    Tools
+    Cheatsheet
     
   </span>
   
@@ -312,7 +325,145 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
+            Cheatsheet
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tools
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
             Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/cursor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cursor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tools/tmux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tmux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Databases
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Databases
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -337,7 +488,7 @@
   
   
   <span class="md-ellipsis">
-    Cursor
+    PostgreSQL
     
   </span>
   
@@ -350,7 +501,7 @@
   
   
   <span class="md-ellipsis">
-    Cursor
+    PostgreSQL
     
   </span>
   
@@ -382,9 +533,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+  <a href="#connection" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration
+      Connection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Creation
     </span>
   </a>
   
@@ -399,24 +568,9 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tmux/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Tmux
-    
-  </span>
-  
-
-      </a>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -465,9 +619,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+  <a href="#connection" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration
+      Connection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#user-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Creation
     </span>
   </a>
   
@@ -489,46 +661,36 @@
 
 
 
-<h1 id="cursor">Cursor</h1>
-<p>The AI Code Editor - https://www.cursor.com/</p>
-<h3 id="installation">Installation</h3>
-<p>1 - Download</p>
-<p>Download the AppImage for Linux from <a href="https://www.cursor.com/downloads">https://www.cursor.com/downloads</a></p>
-<p>e.g. <code>~/Downloads/Cursor-0.47.9-x86_64.AppImage</code></p>
-<p>2 - Install</p>
-<p>Copy this AppImage to <code>/opt</code>,</p>
-<pre><code class="language-bash">sudo cp ~/Downloads/Cursor-0.47.9-x86_64.AppImage /opt/cursor.appimage
+<h1 id="postgresql">PostgreSQL</h1>
+<h2 id="installation">Installation</h2>
+<p>How to install postgres on to Ubuntu</p>
+<pre><code class="language-bash">$ sudo apt install postgresql postgresql-contrib
 </code></pre>
-<p>Make it to be executable,</p>
-<pre><code class="language-bash">sudo chmod +x /opt/cursor.appimage
+<p>Check the postgres service status,</p>
+<pre><code class="language-bash">$ sudo systemctl status postgresql.service
 </code></pre>
-<p>3 - Icon</p>
-<p>Create a desktop icon for Cursor,</p>
-<pre><code class="language-bash">sudo vim /usr/share/applications/cursor.desktop
+<p>If not started, then run</p>
+<pre><code class="language-bash">$ sudo systemctl start postgresql.service
 </code></pre>
-<p>with the following content,</p>
-<pre><code>[Desktop Entry]
-Name=Cursor
-Exec=/opt/cursor.appimage --no-sandbox
-Icon=/opt/cursor.jpeg
-Type=Application
-Categories=Development;
+<h2 id="connection">Connection</h2>
+<p>Installed postgres on Ubuntu, then connect to the default database.</p>
+<p>Run the command to switch to the default user <code>postgres</code>,</p>
+<pre><code class="language-bash">$ sudo -i -u postgres
 </code></pre>
-<p>Search cursor logo online, download a logo image, and copy to <code>/opt/cursor.jpeg</code>.</p>
-<p>4 - Command</p>
-<p>Create an <code>alias</code> to start Cursor from command line,</p>
-<pre><code class="language-bash">vim ~/.zshrc
+<p>Then connect to the default database <code>postgres</code>,</p>
+<pre><code class="language-bash">$ psql -U postgres
 </code></pre>
-<p>Add this line,</p>
-<pre><code class="language-bash">alias cursor='/opt/cursor.appimage --no-sandbox'
+<h2 id="database">Database</h2>
+<p>Create a new database,</p>
+<pre><code class="language-bash">$ CREATE DATABASE &lt;dbname&gt;
 </code></pre>
-<p>Then save and source the file,</p>
-<pre><code class="language-bash">source ~/.zshrc
+<h2 id="user-creation">User Creation</h2>
+<p>Create a new user,</p>
+<pre><code class="language-bash">$ CREATE USER &lt;username&gt; WITH PASSWORD &lt;password&gt;
 </code></pre>
-<h3 id="configuration">Configuration</h3>
-<p>1 - Activity Bar like VSCode</p>
-<p>Open the settings - <code>Ctrl + ,</code></p>
-<p>Workbench &gt; Activity Bar: Orientation, Choose <code>vertical</code></p>
+<p>Grant the user privileges to to the database,</p>
+<pre><code class="language-bash">$ GRANT ALL PRIVILEGES ON DATABASE &lt;dbname&gt; TO &lt;username&gt;;
+</code></pre>
 
 
 
@@ -577,10 +739,10 @@ Categories=Development;
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>
