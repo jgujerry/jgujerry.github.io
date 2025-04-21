@@ -11,9 +11,10 @@ theme:
 
 nav:
   - Home: index.md
-  - Tools:
-    - Cursor: tools/cursor.md
-    - Tmux: tools/tmux.md
+  - Cheatsheet:
+    - Tools:
+      - Cursor: cheatsheet/tools/cursor.md
+      - Tmux: cheatsheet/tools/tmux.md
 
 extra_css:
   - styles/extra.css
